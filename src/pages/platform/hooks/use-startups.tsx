@@ -26,8 +26,7 @@ export const useStartups = ({
             stage: selectedStage !== "all" ? selectedStage : undefined,
             search: searchQuery.trim() || undefined,
             page: currentPage,
-        },
-        {refetchOnMountOrArgChange: true}
+        }
     );
 
     const stats = useMemo(
