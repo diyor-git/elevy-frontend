@@ -44,15 +44,17 @@ export const startupsApi = createApi({
                     params,
                 };
             },
-            providesTags: (result) =>
-                result
-                    ? [
-                        ...result.projects.map(({id}) => ({type: "Startup" as const, id})),
-                        {type: "Startup", id: "LIST"},
-                    ]
-                    : [{type: "Startup", id: "LIST"}],
+        //     providesTags: (result) =>
+        //         result
+        //             ? [
+        //                 ...result.projects.map(({id}) => ({type: "Startup" as const, id})),
+        //                 {type: "Startup", id: "LIST"},
+        //             ]
+        //             : [{type: "Startup", id: "LIST"}],
+        // }),
+        providesTags: ["Startup"],
         }),
-        // можно добавить create/update/delete
+        // можно добавить create/u  pdate/delete
     }),
 });
 
